@@ -1,0 +1,47 @@
+{% extends "control_freaks/base.html" %}
+{% load static %}
+
+{% block title %}Stories{% endblock %}
+
+{% block content %}
+
+<div class="stories bg">
+
+  <!------------------------ Heading ------------------------>
+  <div class="container-fluid container-max heading full-page">
+    <div class="row justify-content-center">
+      <div class="col-sm-12">
+        <h1 class="center-text mb-3">stories</h1>
+      </div>
+      <div class="col-sm-6 text-center">
+        <h4>stories coming soon!</h4>
+        <p class="mb-5">We haven't been around for very long, and sadly don't 
+          have any stories to show you yet. Help us out by sharing your story.</p>
+        <a id="black" class="blob-button" href="{% url 'submit' %}">share your story</a>
+      </div>
+    </div>
+  </div>
+
+  <!------------------------ Stories ------------------------>
+  <div style="display:none">
+  <div class="container-fluid container-max content">
+    <div class="row mb-5">
+      {% for post in object_list %}
+      <div class="col-sm-3">
+        <img class="img-fluid avatar"
+          src='https://avataaars.io/{{ post.avatar }}' />
+      </div>
+      <div class="col-sm-9 title text">
+        <h3><a href="{% url 'story' post.pk %}">{{ post.title }}</a></h3>
+        <p>by {{ post.author }}</p>
+        <!-- replace 'd' with 'j' to remove leading 0s -->
+        <p>{{ post.date|date:"d M Y" }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,462 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Reenie+Beanie&family=Raleway:wght@100;200;300&display=swap");
+
+:root {
+  /* Custom Properties / Variables */
+  --yellow: #ffc300;
+
+  --greenSucess: #b7de9e;
+  --redError: #eb8e98;
+
+  --grey1: #6c6c6c; /*darkest*/
+  --greyText: #afb3b6; /*footer text*/
+  --footer: #1b1f23;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: "Caveat Brush", cursive;
+  letter-spacing: 0.75rem;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: black;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.container-max {
+  max-width: 960px;
+  margin: auto;
+  padding-bottom: 5rem;
+}
+
+.heading {
+  padding-bottom: 0;
+  padding-top: 3rem;
+  margin-bottom: 0;
+}
+
+.full-page {
+  min-height: calc(100vh - 70px);
+}
+
+.bg {
+  /* blob background */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* <!------------------------ All - Navigation bar -------------------------> */
+.navbar {
+  background-color: white;
+  overflow: hidden;
+}
+
+.navbar-nav li {
+  padding: 0 10px;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  font-family: "Caveat Brush", cursive;
+  color: black !important;
+  letter-spacing: 0.3rem;
+  margin: 0;
+}
+
+@media only screen and (max-width: 358px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+}
+
+/* <!------------------------ Home - Introduction -------------------------> */
+#intro {
+  height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#intro #text {
+  text-align: center;
+  min-height: 30%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#intro #img {
+  width: 100%;
+  max-height: 70%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#intro #img > img {
+  width: 100%;
+}
+
+#intro #text p {
+  font-size: 1.4rem;
+}
+
+#intro #text #contraception {
+  color: var(--yellow);
+  font-family: "Caveat Brush", cursive;
+  line-height: 2.4rem;
+  font-size: 2.2rem;
+  padding-bottom: 10px;
+  letter-spacing: 1rem !important;
+}
+
+@media only screen and (max-width: 768px) {
+  #intro {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 405px) {
+  #intro #text #contraception {
+    letter-spacing: 0.5rem !important;
+  }
+  #intro #text p {
+    font-size: 1.2rem;
+  }
+}
+
+/* <!------ About ------!> */
+
+#about {
+  /* To ensure the navbar does not cut the title off */
+  padding-top: 70px;
+  margin-top: 50px;
+}
+
+#about #text h1 {
+  margin-top: 3rem;
+}
+
+#about #text {
+  text-align: justify;
+}
+
+#about p#last {
+  margin-bottom: 0;
+}
+
+#rea_signature {
+  font-family: "Reenie Beanie", cursive;
+  color: var(--yellow);
+  text-align: right !important;
+  font-size: 35px;
+  line-height: 1.5rem;
+}
+
+#vert {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  #vert {
+    display: block;
+  }
+  #hor {
+    display: none;
+  }
+  #about #text h1 {
+    text-align: left !important;
+    margin-top: 0;
+  }
+}
+
+/* <!------------------------ Inform -------------------------> */
+.inform .cont {
+  width: 100%;
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inform .cont > img {
+  width: 40%;
+}
+
+.inform h3 > a {
+  text-decoration: none;
+}
+
+.inform h3 > a:hover {
+  text-decoration: underline;
+}
+
+/* <!------------------------ Inform - Film -------------------------> */
+.inform #netflix {
+  background-color: black;
+  padding: 20px 10px;
+}
+
+/* <!------------------------ Stories -------------------------> */
+.stories.bg {
+  background-image: url("/static/control_freaks/images/blobs-background-1.svg");
+}
+
+.stories .avatar {
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background-color: transparent;
+  width: 100%;
+  margin: auto;
+}
+
+.stories .content {
+  /* Forces content to take minimum entire page */
+  min-height: calc(100vh - 200px);
+}
+
+.title p {
+  margin-bottom: 0;
+}
+
+.title h3 > a {
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 0.2rem;
+}
+
+.title h3 > a:hover {
+  text-decoration: underline;
+}
+
+.title.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+a.blob-button {
+  text-decoration: none;
+}
+
+a.blob-button:hover {
+  text-decoration: underline;
+}
+
+.blob-button {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 30px;
+}
+
+.stories .blob-button#black {
+  color: white;
+  background-image: url("/static/control_freaks/images/blob-button-black.png");
+}
+
+/* <!------------------------ Story -------------------------> */
+.story.bg {
+  background-image: url("/static/control_freaks/images/blobs-background-story.svg");
+  height: 100%;
+}
+
+.story .author-avatar {
+  border-radius: 50%;
+  width: 60%;
+  margin: auto;
+}
+
+.story .title h2 {
+  letter-spacing: 0.2rem;
+}
+
+/* <!------------------------ Submit - Share your story form -------------------------> */
+.btn-yellow {
+  background-color: var(--yellow);
+}
+
+.btn-yellow:hover {
+  background-color: #e0ac00;
+}
+
+label.form-label {
+  margin: 0;
+}
+
+.asteriskField {
+  font-size: 20px;
+  font-weight: 900;
+  color: red;
+}
+
+.mandatory {
+  font-size: 20px;
+  font-weight: 900;
+  color: red;
+}
+
+.mandatory-p {
+  margin-bottom: 0.5rem;
+}
+
+.avatar-text p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.avatar-text p.step {
+  padding-left: 1rem;
+}
+
+.note {
+  font-size: 0.8rem;
+  color: grey;
+}
+
+/* <!------------------------ Messages (success and failure) -------------------------> */
+.message .container {
+  text-align: center;
+  vertical-align: middle;
+
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.message .container#success {
+  background-image: url("/static/control_freaks/images/blob-success.png");
+}
+
+.message .container#failure {
+  background-image: url("/static/control_freaks/images/blob-failure.png");
+}
+
+.message .container {
+  padding: 60px 20px;
+}
+
+.message .container .content {
+  max-width: 80%;
+  margin: auto;
+}
+
+.message .container img {
+  /* Pill illustration */
+  height: auto;
+  margin: auto;
+  padding-bottom: 12px;
+}
+
+.message .container#success img {
+  /* Success pill illustration */
+  max-width: 150px;
+}
+
+.message .container#failure img {
+  /* Success pill illustration */
+  max-width: 200px;
+}
+
+.message .container#success .btn {
+  max-width: 150px;
+}
+
+.message .container#failure .btn {
+  max-width: 150px;
+  background-color: #e36676 !important;
+  border-color: #e36676 !important;
+}
+
+.message .container#failure .btn:hover {
+  background-color: #ad3344 !important;
+  border-color: #ad3344 !important;
+}
+
+/* <!------------------------ Contact us -------------------------> */
+
+.fa-2x {
+  vertical-align: middle;
+}
+
+i {
+  margin-right: 10px;
+}
+
+.contact .avatar {
+  border-radius: 50%;
+  width: 60%;
+  margin: auto;
+}
+
+.contact .blob-button#yellow {
+  background-image: url("/static/control_freaks/images/blob-button-yellow.png");
+}
+
+#meet-the-team {
+  /* To ensure the navbar does not cut the title off */
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 0rem;
+}
+
+/* <!------------------------ All - Footer -------------------------> */
+footer {
+  background-color: var(--footer);
+  color: var(--greyText);
+  text-align: left;
+}
+
+footer a {
+  color: var(--greyText) !important;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .small {
+  font-size: 12px;
+  margin: 0;
+}

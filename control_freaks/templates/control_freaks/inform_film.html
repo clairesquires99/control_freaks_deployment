@@ -1,0 +1,50 @@
+{% extends "control_freaks/base.html" %}
+{% load static %}
+{% block title %}Inform yourself - film & video{% endblock %}
+
+{% block content %}
+
+<div class="inform full-page">
+  
+  <!------------------------ Heading ------------------------>
+  <div class="container-fluid container-max heading">
+
+    <div class="row justify-content-center">
+      <div class="col-sm-12">
+        <h1 class="center-text mb-3">film & video</h1>
+      </div>
+    </div>
+
+  </div>
+
+  <!------------------------ Content ------------------------>
+  <div class="container-fluid container-max content">
+
+    <!-- VIDEO -->
+    <div class="row mb-5">
+      <div class="col-sm-3">
+        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/RdwLAyWHBVs?autoplay=0&mute=1">
+        </iframe>
+      </div>
+      <div class="col-sm-9 title text">
+        <h3><a href='#'>The surprising link between women's brains and the birth control pill</a></h3>
+        <p>TED Talk</p>
+      </div>
+    </div>
+
+    <!-- VIDEO -->
+    <div class="row mb-5">
+      <div class="col-sm-3">
+        <img id="netflix" width="100%" src="{% static 'control_freaks/images/sex_explained.png' %}" alt="Sex, Explained"
+          data-uia="title-logo">
+      </div>
+      <div class="col-sm-9 title text">
+        <h3><a href='#'>Sex, Explained</a></h3>
+        <p>Netflix Docuseries</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

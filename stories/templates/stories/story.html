@@ -1,0 +1,32 @@
+{% extends "control_freaks/base.html" %}
+{% load static %}
+
+{% block title %}Story{% endblock %}
+
+{% block content %}
+
+<!------------------------ Content ------------------------>
+<div class="story bg">
+  <div class="container-fluid container-max">
+    <div class="row justify-content-center">
+      <div class="col-sm-3 pt-3">
+        <img class="img-fluid author-avatar"
+          src='https://avataaars.io/{{ post.avatar }}' />
+      </div>
+      <div class="col-sm-12 text-center title">
+        <h2>{{ post.title }}</h2>
+      </div>
+      <div class="col-sm-12 text-center">
+        <h5>by {{ post.author }} </h5>
+        <p>{{ post.date|date:"d M Y" }} </p>
+      </div>
+      <div class="col-sm-9 justify">
+        <p> {{ post.body|linebreaks }} </p>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

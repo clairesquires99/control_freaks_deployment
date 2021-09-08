@@ -1,0 +1,25 @@
+{% extends "control_freaks/base.html" %}
+{% load static %}
+
+{% block title %}Submit story - failure{% endblock %}
+
+{% block content %}
+
+<!------------------------ Success message ------------------------->
+<div class="message container-fluid full-page d-flex align-items-center justify-content-center">
+  <div class="row">
+    <div id="success" class="col-sm-8 container">
+      <div class="content">
+        <img src="{% static 'control_freaks/images/success.png' %}">
+        <h3>Success!</h3>
+        <p>Your story has been sent successfully.</p>
+        <p>Thank you for sharing your story with us.
+          We will check your submission and upload it
+          as soon as possible.</p>
+        <a class="btn btn-success" href="{% url 'stories' %}" role="button">Browse other people's stories</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

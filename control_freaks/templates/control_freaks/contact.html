@@ -1,0 +1,90 @@
+{% extends "control_freaks/base.html" %}
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+
+<!------------------------ Get in touch ------------------------>
+<div class="contact container-fluid container-max full-page d-flex align-items-center">
+
+  <div class="row justify-content-center">
+    <div class="col-sm-12 heading">
+      <h1 class="mb-3">get in touch</h1>
+    </div>
+    <div class="col-sm-6 text-center">
+      <p>If you have any feedback, questions, opinions or interesting 
+        resources - email us! We would love to hear from you.</p>
+      <p><i class="far fa-envelope fa-2x" aria-hidden="true"></i>&nbsp;
+        info.controlfreaks@gmail.com</p>
+      <p class="mb-4">We are a new website and still in development, so if you 
+        spot anything amiss, unsightly or strange please let us know - 
+        we would love the opportunity to improve.</p>
+        <a id="yellow" class="blob-button" href="{% url 'contact' %}#meet-the-team">meet the team</a>
+    </div>
+  </div>
+
+</div>
+
+<!------------------------ Meet the team ------------------------>
+<div name="meet-the-team" id="meet-the-team" class="container-fluid container-max contact full-page">
+
+  <div class="row justify-content-center">
+    <div class="col-sm-12">
+      <h1 class="center-text mb-3">meet the team</h1>
+    </div>
+  </div>
+
+  <div class="row gx-5">
+
+    <div class="col-md-4 text-center mb-5">
+      <img class="img-fluid avatar mb-3"
+        src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Round&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Side&eyebrowType=DefaultNatural&mouthType=Serious&skinColor=Pale' />
+      <h3>Katie Moore</h3>
+      <h5>Illustrator</h5>
+      <p>Crazy cat lady, newspaper illustrator and Art History 
+        and Spanish student at the University of Edinburgh. 
+        From the Emerald Isle, I boast an insatiable hunger 
+        for excruciatingly punful jokes, breakfast for dinner 
+        and potatoes whether they be gratined, boiled, baked, 
+        pan-fried, deep-fried, mashed, air-fried, or grated. 
+        After I graduate I would like to travel and teach 
+        languages, and continue taking various art courses on 
+        the side. I hope this website will be a place for you a 
+        share your frustration as well as find comfort in knowing 
+        you are not alone.</p>
+    </div>
+
+    <div class="col-md-4 text-center mb-5">
+      <img class="img-fluid avatar mb-3"
+        src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBob&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=ShirtVNeck&clotheColor=Red&eyeType=Happy&eyebrowType=Default&mouthType=Twinkle&skinColor=Light' />
+      <h3>Rea Caballero</h3>
+      <h5>Writer</h5>
+      <p>I'm a fourth year Linguistics and Social Anthropology 
+        student at the University of Edinburgh, looking to 
+        improve our experiences of contraception. Currently, 
+        I'm doing my dissertation in social anthropology on 
+        contraceptive experiences in the UK, and plan on 
+        continuing similar research at postgrad level. In my 
+        spare time, I enjoy painting, chatting shit, and thinking 
+        about questions like, 'How do fish survive without eyelids?'. 
+        I'm really looking forward to hearing all of your stories 
+        and feedback :)</p>
+    </div>
+
+    <div class="col-md-4 text-center mb-5">
+      <img class="img-fluid avatar mb-3"
+        src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=BlondeGolden&facialHairType=Blank&clotheType=CollarSweater&clotheColor=Blue02&eyeType=Close&eyebrowType=Default&mouthType=Default&skinColor=Light' />
+      <h3>Claire Squires</h3>
+      <h5>Web-developer</h5>
+      <p>Chocolate for breakfast kind of person in my last year 
+        of a BSc in Cognitive Science at the University of 
+        Edinburgh, aiming to go into software engineering 
+        when I graduate. A friend once pointed out that coding 
+        is one of the few things where you can make something 
+        from nothing. This space is proof of that. Where once 
+        voices and stories were scattered, I hope now they may 
+        have a home here – where they are heard and shared.</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

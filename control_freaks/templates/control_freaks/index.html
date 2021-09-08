@@ -1,0 +1,75 @@
+{% extends "control_freaks/base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<!------------------------ Introduction ------------------------>
+<div id="intro" class="container-fluid">
+
+  <div id="text">
+    <p>a positive, unstigmatized and informative</p>
+    <p>space for talking about</p>
+    <p id="contraception" class="text-break">contraception</p>
+  </div>
+
+  <div id="img">
+    <img src="{% static 'control_freaks/images/landing_page.png' %}">
+  </div>
+
+</div>
+
+<!------------------------ About us ------------------------>
+<div class="container-fluid container-max d-flex">
+  <div name="about" id="about" class="row">
+    <div class="col-lg-4 npadding">
+      <img id="vert" src="{% static 'control_freaks/images/about_vert.png' %}" class="img-fluid">
+      <img id="hor" src="{% static 'control_freaks/images/about_hor.png' %} " class="img-fluid">
+    </div>
+    <div id="text" class="col-lg-8">
+      <h1>about this blog</h1>
+      <p>Control Freaks is a space inspired by my own (fairly chaotic) experiences on contraception, as well as the
+        varied experiences of loved ones, friends and complete strangers.
+        For me, experiencing emotional lows and being told by my doctor that it couldn’t possibly be my
+        contraception
+        that was causing it, resulted in me staying on it for years. The moment I stopped using it, I felt better
+        again. I then realised that she’d been wrong. This realisation resulted in me feeling frustrated with my
+        doctor for not having listened. It also made me feel trapped – I wanted to feel safe and carry on using
+        contraception, but I was unwilling to risk the debilitating side effects. I’ve heard this echoed time and
+        time
+        again in other people’s experiences.</p>
+      <p> My frustration led me to spend a lot (and I mean, a lot) of time reading and thinking about all of this. I
+        began to wonder: how was my doctor so wrong? Why is it that, when so many of us are going through similar
+        experiences, we are still unnoticed, dismissed as ‘hysterical’ or even ignored? Why do our bodies react so
+        differently even when on exactly the same contraception? Has anyone done any research on any of this? There
+        didn’t seem to be much. Why not?</p>
+      <p> As a result of all these unanswered questions, I felt there was a need for more conversation. And so,
+        Control
+        Freaks was created: a space where you can make your story heard, and find comfort in knowing that you are
+        not
+        alone in your experience.</p>
+      <p> This isn’t a space intended to spread anxiety about contraception, or to provide all the answers. Instead,
+        this is a space to celebrate contraception when it works for us, and somewhere to talk about it when it
+        doesn’t. It’s important to share all of our contraceptive stories, no matter our gender identities,
+        ethnicities or backgrounds, and to create a conversation that is unstigmatized, informative and positive.
+      </p>
+      <p>In the past, contraception increased the freedoms and choices available to people, and it should continue
+        to
+        do so in new and improved ways. My goal is to raise awareness of the often-overlooked nature of our
+        contraceptive experiences. Control Freaks will exist as a persistent and determined reminder that in a world
+        that is caught up in releasing new smartphones every week, everyday technologies like contraception also
+        desperately need an update. There need to be improvements in the technology, the accessibility, the
+        surrounding education and information, and in the medical care. All of this would contribute to the
+        contraception that we are entitled to: safe, accessible and empowering.
+      </p>
+
+      <p id="last">So why Control Freaks? We’re reappropriating the term. Because
+        there’s nothing wrong with wanting to be in control of our own bodies.
+      </p>
+      <p id="rea_signature">— Rea Caballero</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "control_freaks/base.html" %}
+{% load static %}
+
+{% block title %}Submit story - failure{% endblock %}
+
+{% block content %}
+
+<!------------------------ Failure Message ------------------------>
+<div class="message container-fluid full-page d-flex align-items-center justify-content-center">
+  <div class="row">
+    <div id="failure" class="col-sm-8 container">
+      <div class="content">
+        <img src="{% static 'control_freaks/images/failure.png' %}">
+        <h3>Error :(</h3>
+        <p>Something went wrong...</p>
+        <p>Unfortunately the magic of the internet failed
+          and your story has not reached us.</p>
+        <hr>
+        <p>Please try again, or email us your story directly.</p>
+        <a class="btn btn-danger" href="{% url 'submit' %}" role="button">Try again</a>
+        <a class="btn btn-danger" href="{% url 'contact' %}" role="button">Email us</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

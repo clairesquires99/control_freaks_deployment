@@ -1,0 +1,136 @@
+{% extends "control_freaks/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}Submit story{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid container-max heading">
+  <!------------------------ Heading ------------------------>
+  <div class="row justify-content-center">
+    <div class="col-sm-12">
+      <h1 class="mb-3">share your story</h1>
+    </div>
+    <div class="col-sm-6 text-center mb-3">
+      <p>Let’s talk about the good, the bad and the ugly sides of contraception. Whatever your experience has been,
+        we would like to hear about it.</p>
+    </div>
+  </div>
+</div>
+
+<!------------------------ Form ------------------------>
+<div class="container-fluid container-max">
+  <form method="POST" class="row needs-validation" novalidate>
+    {% csrf_token %}
+    <div class="row justify-content-center">
+      <!-- Name -->
+      <div class="col-sm-6 mb-3">
+        {{ form.name|as_crispy_field }}
+      </div>
+      <!-- Email -->
+      <div class="col-sm-6 mb-3">
+        {{ form.email|as_crispy_field }}
+        <div class="invalid-feedback">Please enter either a valid email address or none at all</div>
+      </div>
+
+    </div>
+
+    <div class="row justify-content-center">
+      <!-- Author -->
+      <div class="col-sm-6 mb-3">
+        <label for="author" class="form-label">Author <span class="mandatory">*</span><span class="note">(may be your real name, a pseudonym or 'anonymous')</span></label>
+        {{ form.author|as_crispy_field }}
+        <div class="invalid-feedback">Please provide a name</div>
+      </div>
+      <!-- Title -->
+      <div class="col-sm-6 mb-3">
+        {{ form.title|as_crispy_field }}
+        <div class="invalid-feedback">Please provide a story title</div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <!-- Story -->
+      <div class="col-sm-12 mb-3">
+        {{ form.story|as_crispy_field }}
+        <div class="invalid-feedback">Please provide a story</div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <!-- Avatar link -->
+      <div class="col-sm-12 mb-3 avatar-text">
+        <label for="avatar" class="form-label">Link to your avatar<span class="mandatory">*</span></label>
+        <p>Instead of a portrait of you, we ask that you create your own avatar and send us the link.</p>
+        <p class="step">Step 1: Follow this <a href="https://getavataaars.com/" target="_blank">link</a></p>
+        <p class="step">Step 2: Design your avatar (this can be your likeness or your alter ego)</p>
+        <p class="step">Step 3: Copy the full URL at the top of your browser and paste it below</p>
+        {{ form.avatar|as_crispy_field }}
+        <div class="invalid-feedback">Please create your avatar and provide the link</div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <!-- Mandatory feild note -->
+      <div class="col-sm-12">
+        <p class="mandatory-p"><span class="mandatory">*</span> indicates mandatory field</p>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <!-- Permission 1 -->
+      <div class="col-sm-12">
+        <div class="form-check">
+          <input id="permission1" type="checkbox" class="form-check-input" required>
+          <label class="form-check-label" for="permission1">I understand my that story may be edited for grammar or
+            clarity, but not content.</label>
+          <div class="invalid-feedback">You must acknowledge this</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <!-- Permission 2 -->
+      <div class="col-sm-12">
+        <div class="form-check">
+          <input id="permission2" type="checkbox" class="form-check-input" required>
+          <label class="form-check-label" for="permission2">By submitting my story, I give permission for it to be
+            published online after moderation.</label>
+          <div class="invalid-feedback">You must give permission</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Submit -->
+    <div class="row text-center">
+      <div class="col-sm-12 mt-3 mb-3">
+        <button class="btn btn-yellow" type="submit" name="submit">Submit my story</button>
+      </div>
+    </div>
+  </form>
+
+  <p class="note"><i class="fas fa-exclamation-triangle"></i>&nbsp;If your story hasn't been posted after some time, feel
+    free to email it to us directly. It might have gotten lost somewhere in the ether.
+  </p>
+
+</div>
+
+<!-- Bootstrap Form Validation -->
+<script>
+// Fetch all the forms we want to apply custom Bootstrap validation styles to
+var forms = document.querySelectorAll('.needs-validation');
+// Loop over them and prevent submission
+Array.prototype.slice.call(forms)
+  .forEach(function(form) {
+    form.addEventListener('submit', function(event) {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add('was-validated');
+    }, false);
+  })
+</script>
+
+{% endblock %}

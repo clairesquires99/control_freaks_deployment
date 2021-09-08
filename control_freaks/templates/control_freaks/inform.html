@@ -1,0 +1,82 @@
+{% extends "control_freaks/base.html" %}
+{% load static %}
+{% block title %}Inform yourself{% endblock %}
+
+{% block content %}
+
+<!------------------------ Page Heading ------------------------->
+<div class="container-fluid container-max heading">
+
+  <div class="row justify-content-center">
+    <div class="col-sm-12">
+      <h1 class="center-text mb-3">inform yourself</h1>
+    </div>
+    <div class="col-sm-6 text-center">
+      <p>Here you’ll find a range of resources on contraception and sexual health — some might be more relevant to
+        your experiences than others and that’s totally fine, but we think it’s important (and helpful!) to have
+        information on birth control and sexual health at our fingertips. Informed choices can help us decide
+        which birth control is best, safest and most empowering for us as individuals.</p>
+    </div>
+  </div>
+
+</div>
+
+<!------------------------ Content ------------------------>
+<div class="container-fluid container-max inform">
+
+  <div class="row gx-5">
+
+    <!-- Serious -->
+    <!-- style="background-image: url(static/control_freaks/images/blob-icon-2.svg)" -->
+    <div class="col-sm-4">
+      <div class="cont" style="background-image: url(/static/control_freaks/images/inform-blob-1.svg)">
+        <img src="{% static 'control_freaks/images/inform-serious.png' %}" />
+      </div>
+      <h3 class="text-center"><a href="{% url 'inform_serious' %}">the serious stuff</a></h3>
+      <p class="text-center">For official guides, medical information and other resources</p>
+    </div>
+
+    <!-- Film & Video -->
+    <div class="col-sm-4">
+      <div class="cont" style="background-image: url(/static/control_freaks/images/inform-blob-2.svg)">
+        <img class="img-fluid" src="{% static 'control_freaks/images/inform-film.png' %}" />
+      </div>
+      <h3 class="text-center"><a href="{% url 'inform_film' %}">film & video</a></h3>
+      <p class="text-center">Netflix and chill with us? Here you’ll find interesting clips, documentaries and TED
+        Talks on birth control</p>
+    </div>
+
+    <!-- Opinion Pieces -->
+    <div class="col-sm-4">
+      <div class="cont" style="background-image: url(/static/control_freaks/images/inform-blob-3.svg)">
+        <img class="img-fluid" src="{% static 'control_freaks/images/inform-opinion.png' %}" />
+      </div>
+      <h3 class="text-center"><a href="{% url 'inform_opinion' %}">opinion pieces</a></h3>
+      <p class="text-center">There’s tons of thoughts on contraception – here's some to get you started</p>
+    </div>
+  </div>
+
+  <div class="row mt-5 gx-5 justify-content-center">
+
+    <!-- The Future -->
+    <div class="col-sm-4">
+      <div class="cont" style="background-image: url(/static/control_freaks/images/inform-blob-4.svg)">
+        <img class="img-fluid" src="{% static 'control_freaks/images/inform-future.png' %}" />
+      </div>
+      <h3 class="text-center"><a href="{% url 'inform_future' %}">the future</a></h3>
+      <p class="text-center">Here you’ll find information on contraception that might one day be available</p>
+    </div>
+
+    <!-- What Can I Do? -->
+    <div class="col-sm-4">
+      <div class="cont" style="background-image: url(/static/control_freaks/images/inform-blob-5.svg)">
+        <img class="img-fluid" src="{% static 'control_freaks/images/inform-action.png' %}" />
+      </div>
+      <h3 class="text-center"><a href="{% url 'inform_action' %}">what can I do?</a></h3>
+      <p class="text-center">Find out how you can get involved – we need all the help we can get</p>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
